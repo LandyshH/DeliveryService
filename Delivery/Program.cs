@@ -69,7 +69,7 @@ public class Program
             var orderService = serviceProvider.GetService<IOrderService>();
             orderService!.ProcessOrders(baseDirectory, cityDistrict, firstDeliveryDateTime, deliveryOrderPath);
 
-            Log.Information($"Логи записаны в файл: {deliveryLogPath}.");
+            Log.Information($"Логи записаны в файл: {deliveryLogPath}");
             Log.Information("Завершение программы.");
 
             Console.WriteLine("Нажмите любую клавишу для выхода из программы.");

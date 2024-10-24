@@ -53,7 +53,7 @@ namespace Core.Orders
 
             Log.Information("Получение данных о заказах.");
             var orders = _orderRepository.GetOrders(ordersLines);
-            Log.Information($"Получено: {orders.Count} заказов");
+            Log.Information($"Получено: {orders.Count} заказов.");
             return orders;
         }
 
