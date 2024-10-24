@@ -22,5 +22,9 @@
     &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Core.Orders.OrderServiceTests.ProcessOrders_WhenNoOrdersToProcess&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Core.Orders.OrderServiceTests.ProcessOrders_WhenOrdersFileNotFound&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Core.Orders.OrderServiceTests.ProcessOrders_NoFilteredOrders&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Core.Orders.OrderServiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Files.FileReaderTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Files.FileWriterTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Orders.OrderRepositoryTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

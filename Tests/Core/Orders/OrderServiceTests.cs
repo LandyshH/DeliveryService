@@ -20,8 +20,6 @@ namespace Tests.Core.Orders
                 new OrderService(_orderRepositoryMock.Object, _fileReaderMock.Object, _fileWriterMock.Object);
         }
 
-        private const string FakeBaseDirectory = "directory";
-
         [Fact]
         public void ProcessOrders_WhenOrdersExistAndValid_ShouldFilterAndWriteToFile()
         {

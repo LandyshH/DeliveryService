@@ -1,4 +1,5 @@
-﻿using Core.Files;
+﻿using System.Text.RegularExpressions;
+using Core.Files;
 using Core.Orders;
 using Delivery.Services;
 using Infrastructure.Configurations;
@@ -28,6 +29,8 @@ public class Program
             var baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
             LogConfiguration.SetupLogging();
+            
+            Log.Information("Приложение запущено.");
 
             var configuration = LoadConfiguration(baseDirectory);
 
@@ -36,6 +39,18 @@ public class Program
                 : null; 
 
             var parametersService = serviceProvider.GetService<IParametersService>();
+            
+            if (args.Length == 0)
+            {
+                Console.WriteLine("Введите параметры, либо нажмите Enter для загрузки из конфигурационного файла. \n Формат параметров: \n _cityDistrict \"<Название района>\" _firstDeliveryDateTime \"<Дата и время первой доставки в формате yyyy-MM-dd HH:mm:ss>\" _deliveryLog \"<Путь к файлу лога>\" _deliveryOrder \"<Путь к файлу заказов>");
+
+                var userInput = Console.ReadLine();
+
+                if (userInput != null) args = ParseUserInput(userInput);
+            }
+            
+            Log.Information("Получение параметров.");
+            
             var parameters = parametersService!.LoadAndValidateParameters(orderConfig, args, baseDirectory);
 
             if (parameters == null)
@@ -55,6 +70,9 @@ public class Program
             orderService!.ProcessOrders(baseDirectory, cityDistrict, firstDeliveryDateTime, deliveryOrderPath);
 
             Log.Information("Завершение программы.");
+
+            Console.WriteLine("Нажмите любую клавишу для выхода из программы.");
+            Console.ReadLine();
         }
         catch (Exception ex)
         {
@@ -73,5 +91,32 @@ public class Program
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
             .AddEnvironmentVariables()
             .Build();
+    }
+    
+    private static string[] ParseUserInput(string userInput)
+    {
+        if (string.IsNullOrWhiteSpace(userInput))
+        {
+            return [];
+        }
+
+        var matches = Regex.Matches(userInput, @"(\w+)\s+""([^""]*)""|(\w+)\s+(\S+)");
+        var argsList = new List<string>();
+
+        foreach (Match match in matches)
+        {
+            if (match.Groups[2].Success)
+            {
+                argsList.Add(match.Groups[1].Value);
+                argsList.Add(match.Groups[2].Value);
+            }
+            else
+            {
+                argsList.Add(match.Groups[3].Value);
+                argsList.Add(match.Groups[4].Value);
+            }
+        }
+
+        return argsList.ToArray();
     }
 }
