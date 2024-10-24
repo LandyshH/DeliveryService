@@ -36,8 +36,15 @@ public class ParametersService : IParametersService
         if (orderConfig is not null)
         {
             cityDistrict = orderConfig.CityDistrict;
-            deliveryLogPath = Path.Combine(baseDirectory, orderConfig.DeliveryLog);
-            deliveryOrderPath = Path.Combine(baseDirectory, orderConfig.DeliveryOrder);
+            
+            deliveryLogPath = orderConfig.DeliveryLog is not null 
+                ? Path.Combine(baseDirectory, orderConfig.DeliveryLog) 
+                : string.Empty;
+            
+            deliveryOrderPath = orderConfig.DeliveryOrder is not null 
+                ? Path.Combine(baseDirectory, orderConfig.DeliveryOrder) 
+                : string.Empty;
+            
             firstDeliveryDateTimeStr = orderConfig.FirstDeliveryDateTime;
         }
 

@@ -1,0 +1,26 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cb0837f5_002D27ec_002D49d1_002D893b_002Dd5e9003ca55b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ProcessOrders_WhenOrdersFileNotExists_ShouldLogErrorAndReturn #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Core.Orders.OrderServiceTests.ProcessOrders_WhenOrdersFileNotExists_ShouldLogErrorAndReturn&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Core.Orders.OrderServiceTests.ProcessOrders_WhenOrdersExistAndValid_ShouldFilterAndWriteToFile&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Orders.OrderRepositoryTests.GetOrders_WhenLinesAreValid_ShouldReturnListOfOrders&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Orders.OrderRepositoryTests.GetOrders_WhenLinesAreInvalid_ShouldReturnEmptyList&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Orders.OrderRepositoryTests.GetOrders_WhenSomeLinesAreInvalid_ShouldReturnOnlyValidOrders&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Orders.OrderRepositoryTests.FilterOrdersByDistrictAndTime_WhenOrdersMatchCriteria_ShouldReturnFilteredOrders&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Orders.OrderRepositoryTests.FilterOrdersByDistrictAndTime_WhenNoOrdersMatchCriteria_ShouldReturnEmptyList&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Orders.OrderParserTests.TryParseOrder_WhenLineIsValid_ShouldReturnTrueAndOrderObject&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Orders.OrderParserTests.TryParseOrder_WhenLineNotValid_ShouldReturnFalse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Orders.OrderParserTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Files.FileWriterTests.WriteItemsListToFile_WhenItemsAreValid_ShouldWriteToFile&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Files.FileWriterTests.WriteItemsListToFile_WhenItemsAreEmpty_ShouldCreateEmptyFile&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Files.FileReaderTests.ReadFileText_ShouldReturnLines_WhenFileExists&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Infrastructure.Files.FileReaderTests.ReadFileText_ShouldReturnEmptyArray_WhenFileDoesNotExist&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Delivery.Services.ParametersServiceTests.LoadAndValidateParameters_ShouldReturnParameters_WhenValidParametersProvided&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Delivery.Services.ParametersServiceTests.LoadAndValidateParameters_WhenValidParametersProvidedFromArgs_ShouldReturnParameters&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Delivery.Services.ParametersServiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Core.Orders.OrderServiceTests.ProcessOrders_WhenNoOrdersToProcess&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Core.Orders.OrderServiceTests.ProcessOrders_WhenOrdersFileNotFound&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D6DA881-6D13-4260-BE93-8EF6C0ABFFB1::net8.0::Tests.Core.Orders.OrderServiceTests.ProcessOrders_NoFilteredOrders&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

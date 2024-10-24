@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace Core.Orders;
 
-public class Order
+public record Order
 {
     public int Id { get; set; }
     public double WeightKg { get; set; }
